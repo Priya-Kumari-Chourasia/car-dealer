@@ -1,0 +1,106 @@
+:root {
+    --primaryColor: rgb(231, 167, 19);
+    --secondaryColor: rgb(242, 242, 181);
+    --textColor: brown;
+    --greyColor: rgb(232, 226, 226);
+    --whiteColor: #ffff;
+    --blackColor: rgb(53, 50, 50);
+  }
+
+.search{
+    padding: 2rem 0;
+    .title{
+        color: var(--blackColor);
+        font-size: 22px;
+        padding: 1rem 0;
+        text-align: center;
+        font-weight: 700;
+        line-height: 1.7rem;
+    }
+
+    .searchDiv{
+        gap: .5rem;
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+        
+        input{
+            border-radius: 10px;
+            border: 1px solid var(--secondaryColor);
+            padding: 5px 10px;
+            outline: none;
+            width: 100%;
+
+            &:focus{
+                border: none;
+                border: 1px solid var(--primaryColor);
+            }
+        }
+
+        .btn{
+            justify-content: center;
+            width: 100%;
+            align-self: center;
+            gap: .3rem;
+            .icon{
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+//media queries to make search div responsive
+@media screen and (min-width:520px){
+    .search{
+        .title{
+            font-size: 25px;
+            padding: 2rem 0;
+        }
+
+        .searchDiv{
+            input{
+                padding: 10px;
+                font-weight: 600;
+                color: var(--primaryColor);
+                border-radius: 3px;
+            }
+
+            .btn{
+                justify-content: center;
+                width: 100%;
+                align-items: center;
+                gap: .3rem;
+                font-size: 16px;
+
+                .icon{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .search{
+        .title{
+            font-size: 30px;
+            padding: 2rem 0;
+        }
+        
+
+        .searchDiv{
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    .search{
+        width: 90%;
+        margin: auto;
+
+        .searchDiv{
+            grid-template-columns: repeat(5,1fr);
+        }
+    }
+    
+}

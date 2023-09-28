@@ -1,0 +1,161 @@
+:root {
+  --primaryColor: rgb(231, 167, 19);
+  --secondaryColor: rgb(242, 242, 181);
+  --textColor: brown;
+  --greyColor: rgb(232, 226, 226);
+  --whiteColor: #ffff;
+  --blackColor: rgb(53, 50, 50);
+}
+
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 6px rgb(237, 237, 237);
+  z-index: 1000;
+}
+
+.logoDiv .logo {
+  width: 65px;
+  border: solid;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    position: absolute;
+    background: var(--secondaryColor);
+    width: 80%;
+    top: 100rem;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 10px;
+    text-align: center;
+    padding: 2rem;
+    transition: 0.3s ease;
+    z-index: 2000;
+  }
+  .navbar .closeIcon {
+    position: absolute;
+    bottom: -20px;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    background: var(--secondaryColor);
+    color: var(--primaryColor);
+    padding: 3px;
+    border-radius: 50%;
+    font-size: 35px;
+  }
+  .navbar .closeIcon:hover {
+    color: orchid;
+    cursor: pointer;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .menu .listItem {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .menu .listItem a {
+    font-size: 20px;
+  }
+  .menu .listItem:hover {
+    background: var(--primaryColor);
+    transition: 0.3s ease;
+  }
+  .menu .listItem:hover a {
+    color: var(--whiteColor);
+  }
+  .signUp {
+    gap: 0.5rem;
+  }
+  .signUp .text {
+    padding: 3px 15px;
+    background: var(--primaryColor);
+    border-radius: 4px;
+    color: var(--whiteColor);
+    font-size: 15px;
+  }
+  .signUp .text:hover {
+    background: var(--secondaryColor);
+    color: var(--blackColor);
+  }
+  .signUp .toggleNavbarIcon {
+    background: none;
+    color: var(--primaryColor);
+    font-weight: 600;
+    font-size: 25px;
+  }
+  .showNavbar {
+    top: 7rem;
+    transition: 0.5s ease;
+  }
+}
+.addBg {
+  background: var(--secondaryColor);
+  box-shadow: none;
+}
+
+@media screen and (min-width: 520px) {
+  .header .logoDiv img {
+    width: 40px;
+  }
+  .header .signUp .text {
+    padding: 6px;
+    font-size: 15px;
+  }
+  .header .signUp .toggleNavbarIcon {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header .navbar .closeIcon {
+    display: none;
+  }
+  .header .navbar .menu {
+    display: flex;
+    flex-direction: row;
+  }
+  .header .navbar .menu .listItem {
+    padding: 0.1rem 1rem;
+    border-radius: 2px;
+  }
+  .header .navbar .menu .listItem a {
+    color: var(--textColor);
+    font-size: 15px;
+  }
+  .header .navbar .menu .listItem:hover {
+    background: var(--primaryColor);
+    color: var(--whiteColor);
+    transition: 0.3s ease;
+  }
+  .header .navbar .menu .listItem:hover a {
+    color: var(--whiteColor);
+  }
+  .header .signUp .text {
+    padding: 6px 10px;
+  }
+  .header .signUp .toggleNavbarIcon {
+    display: none;
+  }
+}
+@media screen and (min-width: 1064px) {
+  .header {
+    padding: 2rem 7rem;
+  }
+  .header .navbar .menu .listItem a {
+    font-size: 17px;
+  }
+  .header .signUp .text {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=Navbar.css.map */
